@@ -1,0 +1,128 @@
+.heading {
+    display: flex;
+    padding: 0 25px;
+}
+
+.heading_flag {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.heading button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.heading_name,
+.heading_population {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 4;
+    padding: 20px 0;
+    color: var(--text-color-secondary);
+    font-weight: 500;
+}
+
+.heading_name {
+    justify-content: flex-start;
+}
+
+.heading_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-left: 2px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    text-align: center;
+    background-color: var(--background-color-light);
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    font-weight: 500;
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.row p {
+    margin: 0;
+    user-select: none;
+}
+
+.row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1)
+}
+
+.row:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flag {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.flag img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.name {
+    flex: 4;
+    text-align: left;
+}
+
+.population {
+    flex: 4;
+}
+
+.area,
+.heading_area,
+.gini,
+.heading_gini {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons > button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border: none;
+}
+
+@media (min-width: 720px) {
+    .area,
+    .gini {
+        display: block;
+        flex: 4;
+    }
+
+    .heading_area, 
+    .heading_gini {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 4;
+        padding: 20px 0;
+        color: var(--text-color-secondary);
+        font-weight: 500;
+    }
+}
